@@ -1,0 +1,38 @@
+dbMemo "SQL" ="SELECT *\015\012FROM tblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger;\015"
+    "\012"
+dbMemo "Connect" =""
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbBoolean "FilterOnLoad" ="0"
+dbBoolean "OrderByOnLoad" ="-1"
+dbByte "PublishToWeb" ="1"
+dbText "Description" ="This is a dummy query"
+dbBinary "GUID" = Begin
+    0x4700187d47fbfc499608d7f4c62d1e05
+End
+dbLongBinary "DOL" = Begin
+    0x0acc0e5500000000000000000000000000000000000000000000000000000000 ,
+    0x000000000000000000000000740062006c005400680069007300540061006200 ,
+    0x6c00650048006100730053006f006d0065005200650061006c006c0079004c00 ,
+    0x6f006e0067004e0061006d0065004200750074004900740043006f0075006c00 ,
+    0x6400420065004d007500630068004c006f006e00670065007200000000000000 ,
+    0x000000000000000000000000000000000c000000050000000000000000000000 ,
+    0x000000000000
+End
+Begin
+    Begin
+        dbText "Name" ="tblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger.id"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="tblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger.Desc"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="tblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger.Description"
+        dbLong "AggregateType" ="-1"
+    End
+End

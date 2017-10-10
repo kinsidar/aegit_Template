@@ -1,0 +1,50 @@
+Public Sub CreateTheDb()
+
+Dim strSQL As String
+On Error GoTo ErrorTrap
+
+'Local Table
+
+strSQL="CREATE TABLE [_tblPersist] ([id] Counter,[persist] Text (255) )"
+Currentdb.Execute strSQL
+
+strSQL="CREATE INDEX [id] ON [_tblPersist] ([persist]) "
+Currentdb.Execute strSQL
+
+strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [_tblPersist] ([persist])  WITH PRIMARY DISALLOW NULL "
+Currentdb.Execute strSQL
+
+'Local Table
+
+strSQL="CREATE TABLE [aeItems] ([Item] Text (255),[Quantity] Long,[Status] Text (255),[YNO] Text (255),[CHK] YesNo,[CBO] Text (255) )"
+Currentdb.Execute strSQL
+
+'Local Table
+
+strSQL="CREATE TABLE [aetblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger] ([id] Counter,[Desc] Text (255),[Description] Text (255) )"
+Currentdb.Execute strSQL
+
+strSQL="CREATE INDEX [id] ON [aetblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger] ([Description]) "
+Currentdb.Execute strSQL
+
+strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [aetblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger] ([Description])  WITH PRIMARY DISALLOW NULL "
+Currentdb.Execute strSQL
+
+'Local Table
+
+strSQL="CREATE TABLE [aetlkpStates] ([StateCode] Text (3),[StateAbbreviation] Text (2),[StateName] Text (15) )"
+Currentdb.Execute strSQL
+
+strSQL="CREATE UNIQUE INDEX [PrimaryKey] ON [aetlkpStates] ([StateName])  WITH PRIMARY DISALLOW NULL "
+Currentdb.Execute strSQL
+
+strSQL="CREATE INDEX [State Code] ON [aetlkpStates] ([StateName]) "
+Currentdb.Execute strSQL
+
+'Access 2010 - Compact And Repair
+SendKeys "%F{END}{ENTER}%F{TAB}{TAB}{ENTER}", False
+Exit Sub
+ErrorTrap:
+MsgBox "Erl=" & vbCrLf & "Err.Number=" & Err.Number & vbCrLf & "Err.Description=" & Err.Description
+
+End Sub

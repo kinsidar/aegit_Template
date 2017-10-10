@@ -1,0 +1,4 @@
+<<<qry_Dummy>>>
+SELECT *
+FROM tblThisTableHasSomeReallyLongNameButItCouldBeMuchLonger;
+
